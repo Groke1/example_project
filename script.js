@@ -70,3 +70,52 @@ console.log("2" === 2);
 console.log(true && false); // Логическое И
 console.log(true || false); // Логическое И
 console.log(!true); // Логическое НЕ
+
+let num = 4;
+
+if (num < 49) {
+    console.log("Число меньше 49!")
+} else if (num > 100){
+    console.log("Ваше число больше 100!")
+} else {
+    console.log("Ваше число в диапазоне от 50 до 100!")
+};
+// Тернарный оператор
+//(num == 50) ? console.log('Верно!') : console.log('Неверно!');
+
+
+switch (num) {
+    case 1:
+        console.log("Число равно 1!");
+        break;
+    case 2:
+        console.log("Число равно 2!");
+        break;
+    case 3:
+    case 4:    
+        console.log("Число равно 3 или 4!");
+        break; 
+    default:
+        console.log("Число не 1, не 2, не 3, не 4!"); 
+        break;  
+
+};
+
+// while (num < 10) {
+//     console.log(num);
+//     num++;
+// };
+
+//То же самое, но мы сначала делаем, потом проверяем
+// do {
+//     console.log(num);
+//     num++;
+// }
+//while (num < 10);
+
+for (let i = 1; i <= 10; i ++) {
+    if (i == 6){
+        continue //Таким образом мы пропустили 6
+    }
+    console.log(i)
+}
