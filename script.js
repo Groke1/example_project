@@ -195,19 +195,19 @@ console.log(parseFloat(thirteen)); // Убирает px
 let seven = "7";
 console.log(parseInt('17', 8)); //Переводит в 10-ую систему 17 с основанием 8
 
-function firstFunc() {
-    // Что-то делает
-    setTimeout( function() {
-        console.log(1);
-    }, 500 );
-}
+// function firstFunc() {
+//     // Что-то делает
+//     setTimeout( function() {
+//         console.log(1);
+//     }, 500 );
+// }
 
-function secondFunc() {
-    console.log(2);
-};
+// function secondFunc() {
+//     console.log(2);
+// };
 
-firstFunc();
-secondFunc();
+// firstFunc();
+// secondFunc();
 
 /* Но сначала выводится 2, а потом 1 (вторая функция сработала быстрее).
 Если мы хотям, чтобы вторая функция сработала только после первой, 
@@ -320,3 +320,82 @@ John.__proto__ = soldier; // Joht - солдат
 
 console.log(John);
 console.log(John.armor);
+
+// To String
+
+// 1.
+console.log(typeof(String(null)));
+console.log(typeof(String(239)));
+// 2.
+console.log(typeof(15 + " years old."));
+console.log("It`s " + true);
+console.log(typeof("It`s " + true));
+console.log('https://vk.com/catalog/' + 5);
+
+// To Number
+
+// 1.
+console.log(typeof(Number('5')))
+// 2.
+console.log(typeof(+'5'));
+console.log(5 + +'5');
+// 3.
+console.log(typeof(parseInt('15px', 10)));
+console.log(parseInt('15px', 10));
+
+// let ans = +prompt("Hello?", "");
+
+
+// To Boolean
+
+// 0, '',  null, underfined, NaN = false
+// Все остальное true
+
+// 1.
+let switcher = ' ';
+if (switcher) {
+    console.log("Working..");
+};
+
+// 2.
+console.log(typeof(Boolean(['5'])));
+console.log(Boolean([]));
+
+// 3.
+console.log(typeof(!!null));
+
+console.log(2 && 1 && null && 0 && undefined); // Останавливается на null и его выводит
+console.log(2 && 1 && 0 && undefined); // Останавливается на 0 и его выводит
+
+
+console.log("====================");
+console.log("====================");
+console.log("====================");
+
+let hello = document.getElementById('hello'), // id
+    btn = document.getElementsByTagName('button'),
+    inform = document.getElementsByClassName('inform'), //Elements - получаем псевдо колллекцию
+    images = document.querySelectorAll('.images'), // Указываем Selector
+    oneImage = document. querySelector('.images'); 
+
+// console.log(hello);
+// console.log(btn);
+// console.log(btn[0]);
+// console.log(inform[2]); // Третий элемент коллекции
+// console.log(images);
+// console.log(images[1]);
+// console.log(oneImage); // Получаем первое фото
+
+hello.style.color = 'darkred'; // Поменяли цвет
+btn[1]. style.borderRadius = '100%'; 
+inform[0].style.padding = '40px';
+
+// for (let i = 0; i < images.length; i++) {
+//     images[i].style.borderRadius = '400%';
+//     images[i].style.backgroundColor = 'green';
+// }
+
+images.forEach(function(item) {
+    item.style.borderRadius = '400%';
+    item.style.backgroundColor = 'green';
+});

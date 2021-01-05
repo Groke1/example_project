@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(180, 180, 147);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hello {
+   color: rgb(60, 60, 216);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    padding: 20px
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    background-color: rgb(136, 66, 168);
+    border-radius: 10px;
+    color: rgb(3, 1, 3);
+    cursor: pointer;
+    border-width: 3px;
+    border-color: #c0c;
+    font-weight: 1000;
+}
+
+button:active {
+    color: #ccc;
+    background-color: rgb(134, 134, 209);
+    border-color: lightblue;
+}
+
+.buttons {
+    padding: 20px;
+}
+
+.inform {
+    padding: 10px;
+    color: darkred;
+    font-weight: 900; 
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    padding-right: 15px;
+}
+
+.images {
+    float: left;
+    padding: 20px;
+}
