@@ -367,16 +367,12 @@ console.log(typeof(!!null));
 console.log(2 && 1 && null && 0 && undefined); // Останавливается на null и его выводит
 console.log(2 && 1 && 0 && undefined); // Останавливается на 0 и его выводит
 
-
-console.log("====================");
-console.log("====================");
-console.log("====================");
-
 let hello = document.getElementById('hello'), // id
     btn = document.getElementsByTagName('button'),
     inform = document.getElementsByClassName('inform'), //Elements - получаем псевдо колллекцию
     images = document.querySelectorAll('.images'), // Указываем Selector
-    oneImage = document. querySelector('.images'); 
+    oneImage = document. querySelector('.images'),
+    wrapper = document.querySelector('.wrapper');
 
 // console.log(hello);
 // console.log(btn);
@@ -386,16 +382,37 @@ let hello = document.getElementById('hello'), // id
 // console.log(images[1]);
 // console.log(oneImage); // Получаем первое фото
 
-hello.style.color = 'darkred'; // Поменяли цвет
-btn[1]. style.borderRadius = '100%'; 
-inform[0].style.padding = '40px';
+// hello.style.color = 'darkred'; // Поменяли цвет
+// btn[1]. style.borderRadius = '100%'; 
+// inform[0].style.padding = '40px';
 
 // for (let i = 0; i < images.length; i++) {
 //     images[i].style.borderRadius = '400%';
 //     images[i].style.backgroundColor = 'green';
 // }
 
-images.forEach(function(item) {
-    item.style.borderRadius = '400%';
-    item.style.backgroundColor = 'green';
-});
+// images.forEach(function(item) {
+//     item.style.borderRadius = '400%';
+//     item.style.backgroundColor = 'green';
+// });
+
+let newElement = document.createElement('div'), // Создаем тег div 
+    text = document.createTextNode("Тут был я"); // Текстовый узел
+
+console.log(text);
+
+newElement.classList.add("class"); // Присваиваем class элементу
+
+// newElement.innerHTML = "<h3>Hello World!</h3>";
+newElement.textContent = "<h3>Hello World!</h3>"
+
+// document.body.appendChild(newElement);
+
+//wrapper.appendChild(newElement);
+
+console.log(newElement);
+
+// document.body.insertBefore(newElement, inform[1]); // Что и перед чем
+// document.body.removeChild(inform[2]);
+//wrapper.removeChild(images[0]);
+// document.body.replaceChild(btn[1], inform[1]);

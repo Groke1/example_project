@@ -54,3 +54,10 @@ img {
     float: left;
     padding: 20px;
 }
+
+.class {
+
+    width: 100px;
+    height: 100px;
+    background: red;
+}
